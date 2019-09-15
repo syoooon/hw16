@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>＄→￦ 환율계산기</title>
+  <script>
+    window.onload = init;
+
+    function init() {
+      document.myForm.calc.onclick = calcValu;
+    }
+
+    function calcValu() {
+      document.myForm.doll.value = document.myForm.won.value *
+        document.myForm.rate.value;
+    }
+  </script>
+  <style>
+    .deco{
+      width: 600px;
+      font-size: 15px;
+      display: block;
+      margin: auto;
+      text-align: center;
+      font-weight: bold;
+      background:url(gli3.gif);
+      background-size: cover;
+      }
+
+    #mywon{font-size: 20px; 
+        padding: 8px; 
+        background: #f0f0f0;
+        border: none;
+        box-shadow: 0px 0px 5px inset;
+        
+        margin: auto;
+        
+        border-radius: 6px;
+        margin-top: 0px;
+
+      }
+      #myrate{font-size: 20px; 
+        padding: 8px; 
+        background: #f0f0f0;
+        border: none;
+        box-shadow: 0px 0px 5px inset;
+        
+        margin: auto;
+      
+        
+        border-radius: 6px;
+        margin-top: 0px;
+
+      }
+      .mo,.hwa{font-size: 24px;}
+
+      #ge{padding: 13px;
+        border-radius: 14px;
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        margin-top: 20px;
+        }
+
+      #box{
+        font-size: 20px;
+        padding: 8px;
+      background:url(tenor.gif);
+        border: none;
+        box-shadow: 0px 0px 5px inset;
+        
+        margin: auto;
+      
+        
+        border-radius: 6px;
+        margin-top: 0px;}
+  </style>
+
+</head>
+<body>
+  <div class="deco">
+  <form name="myForm">
+    <br><br><br>
+    <div class="mo">금액</div> 
+    <br> 
+    <input type="text" name="won" size="8" id="mywon">＄(달러)<br><br><br>
+    <div class="hwa">환전환율</div>
+    <br> 
+    <input type="text" name="rate" value="1194.5" size="8" id="myrate"> ￦/＄(원/달러)
+    <br/><br>
+    <input type="button" name="calc" value="계산" id="ge"><br>
+    <br><br><br>
+
+    <input type="text" name="doll" size="8" id="box">원
+  </form>
+</div>
+</body>
+</html>
+
+
